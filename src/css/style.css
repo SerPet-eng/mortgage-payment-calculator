@@ -117,7 +117,8 @@ input {
   padding: 1.5rem;
 }
 .form .form-hero-title {
-  font-family: "Plus Jakarta Sans Bold";
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
   font-size: 1.5rem;
   color: hsl(202, 55%, 16%);
 }
@@ -277,7 +278,8 @@ input {
   border-radius: 30px;
   border: none;
   background-color: hsl(61, 70%, 52%);
-  font-family: "Plus Jakarta Sans Bold";
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
   color: hsl(202, 55%, 16%);
   display: flex;
   justify-content: center;
@@ -312,7 +314,8 @@ input {
 }
 .empty-display .empty-display-group .empty-display-group-title {
   margin: 1rem auto;
-  font-family: "Plus Jakarta Sans Bold";
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
   font-size: 1.5rem;
 }
 .empty-display .empty-display-group .empty-display-group-text {
@@ -356,7 +359,7 @@ input {
   padding: 1rem;
 }
 .success-display .success-display-group-result .repayment-hero {
-  font-family: "Plus Jakarta Sans Bold";
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 2.5rem;
   color: hsl(61, 70%, 52%);
 }
@@ -365,7 +368,8 @@ input {
   margin: 0.5rem auto;
 }
 .success-display .success-display-group-result .total-hero {
-  font-family: "Plus Jakarta Sans Bold";
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
   font-size: 1.5rem;
   color: hsl(0, 0%, 100%);
 }
