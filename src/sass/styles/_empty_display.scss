@@ -1,0 +1,22 @@
+@use '../variables/variables.scss' as *;
+
+.empty-display {
+  background-color: $neutralColor_Slate-900;
+  text-align: center;
+  color: $neutralColor_White;
+
+  padding: 2rem;
+  .empty-display-image {
+    margin: 0 auto;
+  }
+  .empty-display-group {
+    .empty-display-group-title {
+      margin: 1rem auto;
+      font-family: $PlusJakartaBold;
+      font-size: 1.5rem;
+    }
+    .empty-display-group-text {
+      color: $neutralColor_Slate-300;
+    }
+  }
+}

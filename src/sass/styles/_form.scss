@@ -1,0 +1,84 @@
+@use '../variables/variables.scss' as *;
+@use '../functions.scss' as *;
+
+.form {
+  background-color: $neutralColor_White;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1.5rem;
+
+  .form-hero-title {
+    font-family: $PlusJakartaBold;
+    font-size: 1.5rem;
+    color: $neutralColor_Slate-900;
+  }
+
+  .form-hero-clear {
+    color: $neutralColor_Slate-900;
+    text-decoration: underline;
+
+    cursor: pointer;
+  }
+
+  .form-input {
+    display: flex;
+    flex-direction: column;
+
+    .form-input-icon {
+      display: flex;
+      &::before {
+        @include inputLeftIcon(
+          '$',
+          $neutralColor_Slate-500,
+          $neutralColor_Slate-900
+        );
+      }
+    }
+
+    .form-input-style {
+      @include inputLeft($neutralColor_Slate-500);
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .form-group-input {
+      display: flex;
+      flex-direction: column;
+
+      .form-group-input-icon-term {
+        display: flex;
+        &::after {
+          @include inputRightIcon(
+            'years',
+            $neutralColor_Slate-500,
+            $neutralColor_Slate-900
+          );
+        }
+
+        .form-group-input-style-term {
+          @include inputRight($neutralColor_Slate-500);
+        }
+      }
+
+      .form-group-input-icon-rate {
+        display: flex;
+        &::after {
+          @include inputRightIcon(
+            '%',
+            $neutralColor_Slate-500,
+            $neutralColor_Slate-900
+          );
+        }
+
+        .form-group-input-style-rate {
+          @include inputRight($neutralColor_Slate-500);
+        }
+      }
+    }
+  }
+}

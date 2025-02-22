@@ -1,0 +1,634 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans Bold";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Medium";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Italic";
+  src: url("../../../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Regular";
+  src: url("../../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+body {
+  background-color: hsl(202, 86%, 94%);
+  font-family: "Plus Jakarta Sans Regular";
+}
+
+input {
+  outline: none;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans Bold";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Medium";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Italic";
+  src: url("../../../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Regular";
+  src: url("../../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+.form {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+.form .form-hero-title {
+  font-family: "Plus Jakarta Sans Bold";
+  font-size: 1.5rem;
+  color: hsl(202, 55%, 16%);
+}
+.form .form-hero-clear {
+  color: hsl(202, 55%, 16%);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.form .form-input {
+  display: flex;
+  flex-direction: column;
+}
+.form .form-input .form-input-icon {
+  display: flex;
+}
+.form .form-input .form-input-icon::before {
+  content: "$";
+  background-color: hsl(200, 26%, 54%);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid hsl(200, 26%, 54%);
+  border-right: none;
+  border-left: 1px solid hsl(200, 26%, 54%);
+  border-bottom: 1px solid hsl(200, 26%, 54%);
+  border-radius: 10px 0 0 10px;
+  font-family: "Plus Jakarta Sans Bold";
+  color: hsl(202, 55%, 16%);
+}
+.form .form-input .form-input-style {
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid hsl(200, 26%, 54%);
+  border-right: 1px solid hsl(200, 26%, 54%);
+  border-left: none;
+  border-bottom: 1px solid hsl(200, 26%, 54%);
+  border-radius: 0 10px 10px 0;
+}
+.form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form .form-group .form-group-input {
+  display: flex;
+  flex-direction: column;
+}
+.form .form-group .form-group-input .form-group-input-icon-term {
+  display: flex;
+}
+.form .form-group .form-group-input .form-group-input-icon-term::after {
+  content: "years";
+  background-color: hsl(200, 26%, 54%);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid hsl(200, 26%, 54%);
+  border-right: 1px solid hsl(200, 26%, 54%);
+  border-left: none;
+  border-bottom: 1px solid hsl(200, 26%, 54%);
+  border-radius: 0 10px 10px 0;
+  font-family: "Plus Jakarta Sans Bold";
+  color: hsl(202, 55%, 16%);
+}
+.form .form-group .form-group-input .form-group-input-icon-term .form-group-input-style-term {
+  width: 100%;
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid hsl(200, 26%, 54%);
+  border-right: none;
+  border-left: 1px solid hsl(200, 26%, 54%);
+  border-bottom: 1px solid hsl(200, 26%, 54%);
+  border-radius: 10px 0 0 10px;
+}
+.form .form-group .form-group-input .form-group-input-icon-rate {
+  display: flex;
+}
+.form .form-group .form-group-input .form-group-input-icon-rate::after {
+  content: "%";
+  background-color: hsl(200, 26%, 54%);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid hsl(200, 26%, 54%);
+  border-right: 1px solid hsl(200, 26%, 54%);
+  border-left: none;
+  border-bottom: 1px solid hsl(200, 26%, 54%);
+  border-radius: 0 10px 10px 0;
+  font-family: "Plus Jakarta Sans Bold";
+  color: hsl(202, 55%, 16%);
+}
+.form .form-group .form-group-input .form-group-input-icon-rate .form-group-input-style-rate {
+  width: 100%;
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid hsl(200, 26%, 54%);
+  border-right: none;
+  border-left: 1px solid hsl(200, 26%, 54%);
+  border-bottom: 1px solid hsl(200, 26%, 54%);
+  border-radius: 10px 0 0 10px;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans Bold";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Medium";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Italic";
+  src: url("../../../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Regular";
+  src: url("../../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.radio-group .radio-group-style {
+  border: 1px solid hsl(200, 24%, 40%);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.radio-group .radio-group-style input[type=radio] {
+  margin-right: 0.5rem;
+}
+.radio-group .radio-group-style input[type=radio]:checked {
+  padding: 1rem;
+  background-color: red;
+  border-color: hsl(61, 70%, 52%);
+}
+.radio-group .radio-group-style span {
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans Bold";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Medium";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Italic";
+  src: url("../../../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Regular";
+  src: url("../../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+.form-btn {
+  padding: 0.75rem;
+  border-radius: 30px;
+  border: none;
+  background-color: hsl(61, 70%, 52%);
+  font-family: "Plus Jakarta Sans Bold";
+  color: hsl(202, 55%, 16%);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans Bold";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Medium";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Italic";
+  src: url("../../../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Regular";
+  src: url("../../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+.empty-display {
+  background-color: hsl(202, 55%, 16%);
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  padding: 2rem;
+}
+.empty-display .empty-display-image {
+  margin: 0 auto;
+}
+.empty-display .empty-display-group .empty-display-group-title {
+  margin: 1rem auto;
+  font-family: "Plus Jakarta Sans Bold";
+  font-size: 1.5rem;
+}
+.empty-display .empty-display-group .empty-display-group-text {
+  color: hsl(203, 41%, 72%);
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans Bold";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Medium";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Italic";
+  src: url("../../../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Regular";
+  src: url("../../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+.success-display {
+  background-color: hsl(202, 55%, 16%);
+  padding: 2rem;
+  color: hsl(200, 26%, 54%);
+}
+.success-display .success-display-group-title {
+  font-family: "Plus Jakarta Sans Bold";
+  font-size: 1.75rem;
+  color: hsl(0, 0%, 100%);
+}
+.success-display .border-top {
+  margin-top: 1rem;
+  border-top: 5px solid hsl(61, 70%, 52%);
+  border-radius: 10px 10px 0 0;
+}
+.success-display .success-display-group-result {
+  background-color: hsl(201, 55%, 12%);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.success-display .success-display-group-result .repayment-hero {
+  font-family: "Plus Jakarta Sans Bold";
+  font-size: 2.5rem;
+  color: hsl(61, 70%, 52%);
+}
+.success-display .success-display-group-result .horizontal-line {
+  border: 1px solid hsl(203, 41%, 72%);
+  margin: 0.5rem auto;
+}
+.success-display .success-display-group-result .total-hero {
+  font-family: "Plus Jakarta Sans Bold";
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (min-width: 900px) {
+  .app {
+    max-width: 900px;
+    margin: 100px auto;
+    display: flex;
+  }
+  .form {
+    width: 900px;
+    border-radius: 30px 0 0 30px;
+    display: flex;
+    gap: 2rem;
+  }
+  .form .form-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .form .form-group {
+    display: flex;
+    flex-direction: row;
+  }
+  .empty-display {
+    display: grid;
+    place-content: center;
+    min-height: 100%;
+    max-width: 800px;
+    border-radius: 0 30px 30px 0;
+  }
+  .success-display {
+    display: grid;
+    place-content: center;
+    min-height: 100%;
+    max-width: 800px;
+    border-radius: 0 30px 30px 0;
+  }
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Bold";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Medium";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Italic";
+  src: url("../../../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Regular";
+  src: url("../../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+.form-input-style-error {
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid hsl(4, 69%, 50%);
+  border-right: 1px solid hsl(4, 69%, 50%);
+  border-left: none;
+  border-bottom: 1px solid hsl(4, 69%, 50%);
+  border-radius: 0 10px 10px 0;
+}
+
+.form-input-icon-error {
+  display: flex;
+}
+.form-input-icon-error::before {
+  content: "$";
+  background-color: hsl(4, 69%, 50%);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid hsl(4, 69%, 50%);
+  border-right: none;
+  border-left: 1px solid hsl(4, 69%, 50%);
+  border-bottom: 1px solid hsl(4, 69%, 50%);
+  border-radius: 10px 0 0 10px;
+  font-family: "Plus Jakarta Sans Bold";
+  color: hsl(0, 0%, 100%);
+}
+
+.form-group-input-icon-term-error {
+  display: flex;
+}
+.form-group-input-icon-term-error::after {
+  content: "years";
+  background-color: hsl(4, 69%, 50%);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid hsl(4, 69%, 50%);
+  border-right: 1px solid hsl(4, 69%, 50%);
+  border-left: none;
+  border-bottom: 1px solid hsl(4, 69%, 50%);
+  border-radius: 0 10px 10px 0;
+  font-family: "Plus Jakarta Sans Bold";
+  color: hsl(0, 0%, 100%);
+}
+.form-group-input-icon-term-error .form-group-input-style-term-error {
+  width: 100%;
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid hsl(4, 69%, 50%);
+  border-right: none;
+  border-left: 1px solid hsl(4, 69%, 50%);
+  border-bottom: 1px solid hsl(4, 69%, 50%);
+  border-radius: 10px 0 0 10px;
+}
+
+.form-group-input-icon-rate-error {
+  display: flex;
+}
+.form-group-input-icon-rate-error::after {
+  content: "%";
+  background-color: hsl(4, 69%, 50%);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid hsl(4, 69%, 50%);
+  border-right: 1px solid hsl(4, 69%, 50%);
+  border-left: none;
+  border-bottom: 1px solid hsl(4, 69%, 50%);
+  border-radius: 0 10px 10px 0;
+  font-family: "Plus Jakarta Sans Bold";
+  color: hsl(0, 0%, 100%);
+}
+.form-group-input-icon-rate-error .form-group-input-style-rate-error {
+  width: 100%;
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid hsl(4, 69%, 50%);
+  border-right: none;
+  border-left: 1px solid hsl(4, 69%, 50%);
+  border-bottom: 1px solid hsl(4, 69%, 50%);
+  border-radius: 10px 0 0 10px;
+}
+
+.error-style {
+  margin: 0.5rem;
+}
+.error-style .error-style-text {
+  color: red;
+}
+
+.radio-group-style-error {
+  border: 1px solid hsl(4, 69%, 50%);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.radio-group-style-error input {
+  margin-right: 0.5rem;
+}
+.radio-group-style-error span {
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans Bold";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Medium";
+  src: url("../../../assets/fonts/static/PlusJakartaSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Italic";
+  src: url("../../../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Regular";
+  src: url("../../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+.form-input-style-active {
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid hsl(61, 70%, 52%);
+  border-right: 1px solid hsl(61, 70%, 52%);
+  border-left: none;
+  border-bottom: 1px solid hsl(61, 70%, 52%);
+  border-radius: 0 10px 10px 0;
+}
+
+.form-input-icon-active {
+  display: flex;
+}
+.form-input-icon-active::before {
+  content: "$";
+  background-color: hsl(61, 70%, 52%);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid hsl(61, 70%, 52%);
+  border-right: none;
+  border-left: 1px solid hsl(61, 70%, 52%);
+  border-bottom: 1px solid hsl(61, 70%, 52%);
+  border-radius: 10px 0 0 10px;
+  font-family: "Plus Jakarta Sans Bold";
+  color: hsl(202, 55%, 16%);
+}
+
+.form-group-input-icon-term-active {
+  display: flex;
+}
+.form-group-input-icon-term-active::after {
+  content: "years";
+  background-color: hsl(61, 70%, 52%);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid hsl(61, 70%, 52%);
+  border-right: 1px solid hsl(61, 70%, 52%);
+  border-left: none;
+  border-bottom: 1px solid hsl(61, 70%, 52%);
+  border-radius: 0 10px 10px 0;
+  font-family: "Plus Jakarta Sans Bold";
+  color: hsl(202, 55%, 16%);
+}
+.form-group-input-icon-term-active .form-group-input-style-term-active {
+  width: 100%;
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid hsl(61, 70%, 52%);
+  border-right: none;
+  border-left: 1px solid hsl(61, 70%, 52%);
+  border-bottom: 1px solid hsl(61, 70%, 52%);
+  border-radius: 10px 0 0 10px;
+}
+
+.form-group-input-icon-rate-active {
+  display: flex;
+}
+.form-group-input-icon-rate-active::after {
+  content: "%";
+  background-color: hsl(61, 70%, 52%);
+  padding: 0.5rem 1rem;
+  border-top: 1px solid hsl(61, 70%, 52%);
+  border-right: 1px solid hsl(61, 70%, 52%);
+  border-left: none;
+  border-bottom: 1px solid hsl(61, 70%, 52%);
+  border-radius: 0 10px 10px 0;
+  font-family: "Plus Jakarta Sans Bold";
+  color: hsl(202, 55%, 16%);
+}
+.form-group-input-icon-rate-active .form-group-input-style-rate-active {
+  width: 100%;
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid hsl(61, 70%, 52%);
+  border-right: none;
+  border-left: 1px solid hsl(61, 70%, 52%);
+  border-bottom: 1px solid hsl(61, 70%, 52%);
+  border-radius: 10px 0 0 10px;
+}
+
+.radio-group-style-active {
+  border: 1px solid hsl(61, 70%, 52%);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.radio-group-style-active input {
+  margin-right: 0.5rem;
+}
+.radio-group-style-active span {
+  pointer-events: none;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,16 @@
+@use '../variables/variables.scss' as *;
+
+.form-btn {
+  padding: 0.75rem;
+  border-radius: 30px;
+  border: none;
+  background-color: $primaryColor_Lime;
+  font-family: $PlusJakartaBold;
+  color: $neutralColor_Slate-900;
+
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+}

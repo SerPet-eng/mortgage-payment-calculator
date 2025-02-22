@@ -1,0 +1,50 @@
+@use './variables/variables.scss' as *;
+
+@mixin inputLeft($color) {
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid $color;
+  border-right: 1px solid $color;
+  border-left: none;
+  border-bottom: 1px solid $color;
+  border-radius: 0 10px 10px 0;
+}
+
+@mixin inputLeftIcon($content, $color, $fontColor) {
+  content: $content;
+  background-color: $color;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid $color;
+  border-right: none;
+  border-left: 1px solid $color;
+  border-bottom: 1px solid $color;
+  border-radius: 10px 0 0 10px;
+
+  font-family: $PlusJakartaBold;
+  color: $fontColor;
+}
+
+@mixin inputRight($color) {
+  width: 100%;
+  padding: 0.5rem;
+  width: 100%;
+  border-top: 1px solid $color;
+  border-right: none;
+  border-left: 1px solid $color;
+  border-bottom: 1px solid $color;
+  border-radius: 10px 0 0 10px;
+}
+
+@mixin inputRightIcon($content, $color, $fontColor) {
+  content: $content;
+  background-color: $color;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid $color;
+  border-right: 1px solid $color;
+  border-left: none;
+  border-bottom: 1px solid $color;
+  border-radius: 0 10px 10px 0;
+
+  font-family: $PlusJakartaBold;
+  color: $fontColor;
+}

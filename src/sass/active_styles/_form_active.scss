@@ -1,0 +1,58 @@
+@use '../variables/variables.scss' as *;
+@use '../functions.scss' as *;
+
+.form-input-style-active {
+  @include inputLeft($primaryColor_Lime);
+}
+
+.form-input-icon-active {
+  display: flex;
+  &::before {
+    @include inputLeftIcon('$', $primaryColor_Lime, $neutralColor_Slate-900);
+  }
+}
+
+.form-group-input-icon-term-active {
+  display: flex;
+  &::after {
+    @include inputRightIcon(
+      'years',
+      $primaryColor_Lime,
+      $neutralColor_Slate-900
+    );
+  }
+
+  .form-group-input-style-term-active {
+    @include inputRight($primaryColor_Lime);
+  }
+}
+
+.form-group-input-icon-rate-active {
+  display: flex;
+  &::after {
+    @include inputRightIcon('%', $primaryColor_Lime, $neutralColor_Slate-900);
+  }
+
+  .form-group-input-style-rate-active {
+    @include inputRight($primaryColor_Lime);
+  }
+}
+
+.radio-group-style-active {
+  border: 1px solid $primaryColor_Lime;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem;
+  cursor: pointer;
+
+  input {
+    margin-right: 0.5rem;
+  }
+
+  span {
+    pointer-events: none; // Prevent span from blocking the label click
+  }
+}
