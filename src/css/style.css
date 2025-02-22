@@ -86,7 +86,7 @@ h6 {
 }
 body {
   background-color: hsl(202, 86%, 94%);
-  font-family: "Plus Jakarta Sans Regular";
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 input {
